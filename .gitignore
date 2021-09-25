@@ -15,3 +15,8 @@
 .DS_Store
 
 .prettierignore
+
+# Node modules and Sass files
+node_modules
+.sass_cache
+*.css.map
