@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 16px;
+  color: $v-dark-des-blue;
+  line-height: 1.5;
+
+  /* Prevent weird font scaling in iPhone/iPad landscape mode */
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  transition: color .2s;
+  font-weight: 700;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: .4em solid orange;
+}

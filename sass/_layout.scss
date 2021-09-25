@@ -1,0 +1,61 @@
+.row {
+  display: flex;
+  justify-content: center;
+
+  > * + * {
+    margin-left: .5em;
+  }
+}
+
+
+body {
+  min-height: 100vh;
+  padding: 1.58em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $dark-cyan;
+  background-image:
+    url('/images/bg-pattern-top.svg'),
+    url('/images/bg-pattern-bottom.svg');
+  background-position:
+    top 188% left 126%,
+    bottom 188% right 124%;
+  background-repeat: no-repeat;
+
+  /**
+   * Adjust the position of the 2 circles in the background on large viewports.
+   * Not sure if there's a more elegant solution that works without media
+   * queries...
+   */
+  @media (min-width: 1000px) {
+    background-position:
+      top 200% left -61%,
+      bottom 245% right -50%;
+  }
+}
+
+
+
+
+
+/**
+ * Offset the card a little from the top to keep it centered and aligned with
+ * the mockup, accounting for the added space from the footer.
+ */
+main {
+  margin-top: 20px;
+  // for desktop: 150px;
+  // for mobile:  120px;
+}
+
+
+
+
+
+footer {
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: 1em;
+}

@@ -1,0 +1,101 @@
+/**
+ * Card component
+ */
+.card {
+  max-width: 350px;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: $rnd-borders;
+  margin: 0 auto;
+  box-shadow: 5px 50px 65px hsla(0, 0%, 0%, 0.15);
+}
+
+
+/**
+ * The Card Header contains the Cover and Avatar elements. Grouping them in a
+ * container isn't strictly necessary, but it helps keep the code organized and
+ * prevents the need to set relative positioning on the elements.
+ */
+.card__header {
+  height: 140px;
+  margin-bottom: 70px;
+}
+
+.card__cover {
+  height: 100%;
+  object-fit: cover;
+  border-radius: $rnd-borders $rnd-borders 0 0;
+}
+
+/**
+ * The Avatar sits along the bottom edge of the card header.
+ * 1. Fixed size, so it doesn't expand/shrink with different image sizes
+ * 2. Prevent image from stretching when it doesn't have a 1:1 aspect ratio
+ */
+.card__avatar {
+  width:  106px; /* 1 */
+  height: 106px; /* 1 */
+  object-fit: cover; /* 2 */
+  transform: translateY(-50%);
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF;
+}
+
+
+
+
+
+/**
+ * Card Content
+ */
+
+.p-info__name, .p-info__age,
+.p-stats__value {
+  font-size: 1.125rem;
+}
+
+.p-info__name, 
+.p-stats__value {
+  font-weight: 700;
+}  
+
+.p-info__location {
+  font-size: .857rem;
+}
+
+.p-stats__metric {
+  font-size: .625rem;
+  letter-spacing: .1rem;
+}
+
+.p-info__age, .p-info__location,
+.p-stats__metric {
+  color: $dark-grayish-blue;
+}    
+
+
+/**
+ * This could be placed in the location element's ruleset, but decided to
+ * separate it in case a new profile info element is to be added.
+ */
+.p-info > * + * {
+  margin-top: .25em;
+}
+
+
+.p-stats {
+  padding: 1.35em;
+  margin-top: 1.5em;
+  border-top: 1px solid hsl(0, 0%, 91%);
+
+  &__list {
+    display: flex;
+
+    /**
+     * For centering the stats items, use flex-grow instead of `space-between`
+     * to account for longer metric labels.
+     */
+    > * { flex: 1 0 5em; }
+  }
+}
