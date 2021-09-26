@@ -149,7 +149,7 @@ body {
   flex-direction: column;
   justify-content: center;
   background: #19a2ae;
-  background-image: url("/images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg");
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-position: top 188% left 126%, bottom 188% right 124%;
   background-repeat: no-repeat;
   /**
